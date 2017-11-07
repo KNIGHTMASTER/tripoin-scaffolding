@@ -25,10 +25,10 @@ public interface IInquiryDAO<DATA> {
 	List<DATA> findByCodeContainingAndStatusOrderByCodeAsc(String p_Code, int p_Status) throws DAOException;
 
 	List<DATA> findByCodeContainingAndStatusOrderByCodeDesc(String p_Code, int p_Status) throws DAOException;
-	
-	Page<DATA> findByCodeContainingAndStatusOrderByCodeAsc(String p_Code, int p_Status, Pageable p_Pageable) throws DAOException;
 
-	Page<DATA> findByCodeContainingAndStatusOrderByIdAsc(String p_Code, int p_Status, Pageable p_Pageable) throws DAOException;
+	Page<DATA> findByCodeContainingAndStatus(String p_Code, int p_Status, Pageable p_Pageable) throws DAOException;
+
+	Page<DATA> findByCodeContainingAndStatusOrderByCodeAsc(String p_Code, int p_Status, Pageable p_Pageable) throws DAOException;
 
 	/*Property NAME*/
 	List<DATA> findByNameContainingAndStatus(String p_Name, int p_Status) throws DAOException;
@@ -39,7 +39,7 @@ public interface IInquiryDAO<DATA> {
 
 	List<DATA> findByNameContainingAndStatusOrderByNameDesc(String p_Name, int p_Status) throws DAOException;
 
-	Page<DATA> findByNameContainingAndStatusOrderByIdAsc(String p_Name, int p_Status, Pageable p_Pageable) throws DAOException;
+	Page<DATA> findByNameContainingAndStatus(String p_Name, int p_Status, Pageable p_Pageable) throws DAOException;
 
 	Page<DATA> findByNameContainingAndStatusOrderByNameAsc(String p_Name, int p_Status, Pageable p_Pageable) throws DAOException;
 

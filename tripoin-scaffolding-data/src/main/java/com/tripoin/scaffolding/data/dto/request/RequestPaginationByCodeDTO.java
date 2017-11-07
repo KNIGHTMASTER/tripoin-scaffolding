@@ -26,8 +26,8 @@ public class RequestPaginationByCodeDTO extends PaginationDTO {
 
     @Override
     public String toString() {
-        return "RequestPaginationByCode{" +
-                "code='" + code + '\'' +
+        return "RequestPaginationByCode{" +super.toString()+
+                " code='" + code + '\'' +
                 '}';
     }
 }

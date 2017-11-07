@@ -50,11 +50,11 @@ public interface IInquiryEndPoint {
 
     @ResponseBody
     @PostMapping(value = IEndPointConstant.PathName.PathScaffolding.PATH_FIND_PAGINATION_BY_CODE_ORDER_BY_ID, produces = IEndPointConstant.Common.APPLICATION_JSON)
-    public Page<?> findPaginationByCodeOrderByIdAsc(RequestPaginationByCodeDTO p_RequestPaginationByCode) throws EndPointException;
+    public Page<?> findPaginationByCodeOrderByIdAsc(@RequestBody RequestPaginationByCodeDTO p_RequestPaginationByCode) throws EndPointException;
 
     @ResponseBody
     @PostMapping(value = IEndPointConstant.PathName.PathScaffolding.PATH_FIND_PAGINATION_BY_CODE_ORDER_BY_CODE, produces = IEndPointConstant.Common.APPLICATION_JSON)
-    public Page<?> findPaginationByCodeOrderByCodeAsc(RequestPaginationByCodeDTO p_RequestPaginationByCode) throws EndPointException;
+    public Page<?> findPaginationByCodeOrderByCodeAsc(@RequestBody RequestPaginationByCodeDTO p_RequestPaginationByCode) throws EndPointException;
 
     /*Property Name*/
     @ResponseBody

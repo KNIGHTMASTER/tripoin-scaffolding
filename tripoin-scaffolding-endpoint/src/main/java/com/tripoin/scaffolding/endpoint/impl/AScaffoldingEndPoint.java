@@ -166,7 +166,7 @@ public abstract class AScaffoldingEndPoint<DATA> implements IScaffoldingEndPoint
 	}
 
 	@Override
-	public Page<?> findPaginationByCodeOrderByIdAsc(RequestPaginationByCodeDTO p_RequestPaginationByCode) throws EndPointException {
+	public Page<?> findPaginationByCodeOrderByIdAsc(@RequestBody RequestPaginationByCodeDTO p_RequestPaginationByCode) throws EndPointException {
 		try {
 			PageRequest pr = iDataBuilderEndPoint.buildPageRequest(
 					iDataBuilderEndPoint.buildDTOPagination(
@@ -285,7 +285,7 @@ public abstract class AScaffoldingEndPoint<DATA> implements IScaffoldingEndPoint
 							p_RequestPaginationByName.getSort())
 			);
 			Page<DATA> dataPage = scaffoldingService.findByNameOrderByIdAsc(
-					p_RequestPaginationByName.getName(),pr
+					p_RequestPaginationByName.getName(), pr
 
 			);
 			if (dataMapperIntegration != null){

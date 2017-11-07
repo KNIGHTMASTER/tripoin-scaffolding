@@ -94,7 +94,7 @@ public abstract class AScaffoldingService<DATA extends AAuditTrail> implements I
     @Override
     public Page<DATA> findByCodeOrderByIdAsc(String p_Code, Pageable p_Pageable) throws ServiceException {
         try {
-            return scaffoldingDAO.findByCodeContainingAndStatusOrderByIdAsc(p_Code, IApplicationConstant.Common.GeneralValue.ONE, p_Pageable);
+            return scaffoldingDAO.findByCodeContainingAndStatus(p_Code, IApplicationConstant.Common.GeneralValue.ONE, p_Pageable);
         } catch (DAOException e) {
             LOGGER.error(e.getMessage());
             return null;
@@ -154,7 +154,7 @@ public abstract class AScaffoldingService<DATA extends AAuditTrail> implements I
     @Override
     public Page<DATA> findByNameOrderByIdAsc(String p_Name, Pageable p_Pageable) throws ServiceException {
         try {
-            return scaffoldingDAO.findByNameContainingAndStatusOrderByIdAsc(p_Name, IApplicationConstant.Common.GeneralValue.ONE, p_Pageable);
+            return scaffoldingDAO.findByNameContainingAndStatus(p_Name, IApplicationConstant.Common.GeneralValue.ONE, p_Pageable);
         } catch (DAOException e) {
             LOGGER.error(e.getMessage());
             return null;
