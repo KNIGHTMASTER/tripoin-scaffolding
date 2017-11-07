@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tripoin</groupId>
+        <artifactId>tripoin-scaffolding</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    
+    <artifactId>tripoin-scaffolding-dao</artifactId>
+    <packaging>jar</packaging>
+    <name>Tripoin Scaffolding DAO</name>
+    
+    <organization>
+        <name>Tripoin</name>
+        <url>http://www.tripoin.co.id</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>KNIGHTMASTER</id>
+            <name>Achmad Fauzi</name>
+            <email>fauzi.knightmaster.achmad@gmail.com</email>
+            <roles>
+                <role>author</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+7</timezone>
+        </developer>
+    </developers>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.tripoin</groupId>
+            <artifactId>tripoin-scaffolding-data</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
