@@ -559,6 +559,7 @@ public abstract class AScaffoldingEndPoint<DATA> implements IScaffoldingEndPoint
 	public ResponseData insertData(@RequestBody DATA p_DATA) throws EndPointException {
 		try {
 //			scaffoldingService.setEthAuthenticationDTO(ethAuthenticationProvider.generateAuth()););
+			LOGGER.info(p_DATA.toString());
 			scaffoldingService.insert(p_DATA);
 			return scaffoldingResponseConstructor.constructSimpleTransactionResponse(iDataBuilderEndPoint.buildSuccessResponse());
 		}catch (EndPointException | ServiceException e){

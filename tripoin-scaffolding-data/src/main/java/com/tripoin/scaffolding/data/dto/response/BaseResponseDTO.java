@@ -1,5 +1,7 @@
 package com.tripoin.scaffolding.data.dto.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 
 /**
@@ -33,6 +35,7 @@ public class BaseResponseDTO extends MasterResponseDTO implements Serializable {
 		this.remarks = remarks;
 	}
 
+	@JsonIgnore
 	public Integer getStatus() {
 		return status;
 	}
